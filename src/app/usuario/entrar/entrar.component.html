@@ -1,4 +1,4 @@
-<div class="container mt-5 col-7">
+<!--<div class="container mt-5 col-7">
     <h1>Inicio de sesión</h1>
     <form [formGroup]= "loginForm" (ngSubmit)="entrar()">
         <div class="mb-3">
@@ -15,4 +15,57 @@
     <div class="container mt-5 text-center">
         <a routerLink="registrar">Crear un usuario</a>
     </div>
+</div>-->
+
+
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-xl-10 col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Bienvenido</h1>
+                                </div>
+                                <form class="user" [formGroup]= "loginForm" (ngSubmit)="entrar()">
+                                    <div class="form-group">
+                                        <input type="text" formControlName= "username"
+                                            class="form-control form-control-user"
+                                            id="userInputEmail" aria-describedby="userHelp"
+                                            placeholder="Enter User...">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" formControlName= "password" class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="Password">
+                                    </div>
+
+                                    <a routerLink="/home" class="btn btn-primary btn-user btn-block">
+                                        Login
+                                    </a>
+
+                                </form>
+                                <hr>
+
+                                <div class="text-center">
+                                    <a routerLink="registrar">Crear un usuario</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
+
