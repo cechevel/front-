@@ -25,7 +25,6 @@ export class EntrarComponent implements OnInit {
   entrar(){
 
     this.usuarioService.entrar(this.loginForm.value).subscribe((data:any)=>{
-      console.log(data);
       if(data.mensaje=="Accedio correctamente"){
        this.router.navigateByUrl('inicio')
       }else{

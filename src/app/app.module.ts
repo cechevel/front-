@@ -15,7 +15,7 @@ import { NavComponent } from './shared/nav/nav.component';
     EntrarComponent,
     RegistrarComponent,
     InicioComponent,
-    NavComponent
+    NavComponent,
   ],
   imports: [
     BrowserModule,
