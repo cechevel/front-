@@ -7,13 +7,15 @@ import { EntrarComponent } from './usuario/entrar/entrar.component';
 import { RegistrarComponent } from './usuario/registrar/registrar.component';
 import { InicioComponent } from './principal/inicio/inicio.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavComponent } from './shared/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntrarComponent,
     RegistrarComponent,
-    InicioComponent
+    InicioComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
