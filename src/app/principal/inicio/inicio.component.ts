@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MateriaService } from 'src/app/services/materia.service';
+import { Periodos } from 'src/app/models/periodos.model';
+import { PeriodosService } from 'src/app/services/periodo.service';
 
 @Component({
   selector: 'app-inicio',
@@ -8,15 +9,18 @@ import { MateriaService } from 'src/app/services/materia.service';
 })
 export class InicioComponent implements OnInit {
 
-  constructor(private materiaService: MateriaService) { }
+  periodos: Periodos[] = [];
+
+  constructor(private periodoService: PeriodosService) { }
 
   ngOnInit(): void {
-    this.traerMaterias()
+    this.traerperiodos()
   }
 
-  traerMaterias(){
-    this.materiaService.obtenerMaterias().subscribe(materias =>{
-       console.log(materias)
+  traerperiodos(){
+    this.periodoService.obtenerPeriodos().subscribe((periodos:any) =>{
+       console.log(periodos)
+       this.periodos = periodos
     })
   }
 

@@ -3,7 +3,6 @@ export interface Periodos {
     numeroPeriodo:  number
     usuario:        Usuario;
     materia:        Materia;
-    fecha:          String;
     nota:           number;
    
 }

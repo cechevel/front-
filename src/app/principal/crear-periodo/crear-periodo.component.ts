@@ -31,17 +31,13 @@ export class CrearPeriodoComponent implements OnInit {
 
   ngOnInit(): void {
     this.periodoForm = this.fb.group({
-     /* id:             string;
-    numeroPeriodo:  number
-    usuario:        Usuario;
-    materia:        Materia;
-    fecha:          String;
-    nota:           number;*/
+    
+      Id:[''],
+      numeroPeriodo:[''],
       usuario: [this.usuario],
       materia: [this.materia],
-      fecha: [''],
-      goleslocal: [''],
-      golesvisitante: [''],
+      nota: [''],
+      
     })
     this.traerMaterias()
   }
