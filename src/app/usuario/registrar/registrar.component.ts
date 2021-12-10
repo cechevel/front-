@@ -28,8 +28,7 @@ export class RegistrarComponent implements OnInit {
   }
   agregar(){
     this.usuarioService.añadirUsuario(this.usuarioForm.value).subscribe((data:any)=>{
-      console.log(data)
-      
+       
     })
   }
 

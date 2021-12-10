@@ -20,4 +20,8 @@ export class MateriaService {
     obtenerMaterias(){
       return this.http.get(`${this.baseURL}/api/materias`, this.headers)
     }
+
+    añadirMateria(data:any){
+      return this.http.post(`${this.baseURL}/api/materias`,data, this.headers)
+    }
 }

@@ -8,6 +8,8 @@ import { RegistrarComponent } from './usuario/registrar/registrar.component';
 import { InicioComponent } from './principal/inicio/inicio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from './shared/nav/nav.component';
+import { CrearMateriaComponent } from './principal/crear-materia/crear-materia.component';
+import { CrearPeriodoComponent } from './principal/crear-periodo/crear-periodo.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { NavComponent } from './shared/nav/nav.component';
     RegistrarComponent,
     InicioComponent,
     NavComponent,
+    CrearMateriaComponent,
+    CrearPeriodoComponent,
   ],
   imports: [
     BrowserModule,

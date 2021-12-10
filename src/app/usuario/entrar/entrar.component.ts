@@ -23,16 +23,16 @@ export class EntrarComponent implements OnInit {
   }
   
   entrar(){
-
-    this.usuarioService.entrar(this.loginForm.value).subscribe((data:any)=>{
-      if(data.mensaje=="Accedio correctamente"){
+    
+    this.usuarioService.entrar(this.loginForm.value).subscribe((data:any) =>{
+      console.log(data);
+      if(data.mensaje=="Accedió correctamente"){
        this.router.navigateByUrl('inicio')
+       alert(data.mensaje + " :)")
       }else{
         alert(data.mensaje)
       }
     })
-  
-
   }
 
 

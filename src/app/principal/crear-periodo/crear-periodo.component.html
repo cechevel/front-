@@ -1,0 +1,86 @@
+<!--<div class="container mt-3 col-5 fondo mb-5">
+    <h1>Crear nuevo periodo</h1>
+    <form [formGroup]="periodoForm" (ngSubmit)="agregar()">
+        <div class="mb-3">
+            <label  class="numeroPeriodo">NumeroPeriodo</label>
+            <input type="number" placeholder="Ingrese" formControlName="numeroPeriodo" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Materia</label>
+            <select class="form-control" formControlName="materia">
+                <option *ngFor="let item of materias" value="{{item.id}}">{{item.nombre}}</option>
+            </select>
+        </div>
+        
+        <div class="mb-3">
+            <label  class="form-label">Nota</label>
+            <input type="number" formControlName="nota" placeholder="Ingrese" class="form-control">
+        </div>
+
+        <div class="text-center">
+            <button class="btn-success btn">Guardar</button>
+        </div>
+    </form>
+    <br>
+</div>-->
+
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-xl-10 col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">AGREGAR PERIODO</h1>
+                                </div>
+                                <form [formGroup]="periodoForm" class="user" (ngSubmit)="agregar()">
+                            
+                                    <div class="form-group">
+                                        <input type="number"  formControlName="numeroPeriodo"
+                                            class="form-control form-control-user"
+                                             aria-describedby="userHelp"
+                                            placeholder="Enter periodo...">
+                                    </div>
+                                    <div class="form-group">
+                                        <label  class="form-label">Materia</label> 
+                                        <select class="form-control" formControlName="materia">
+                                            <option *ngFor="let item of materias" value="{{item.id}}">{{item.nombre}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number"  formControlName="nota"
+                                            class="form-control form-control-user"
+                                             aria-describedby="userHelp"
+                                            placeholder="Enter nota...">
+                                    </div>
+                                    <button class="btn btn-primary btn-user btn-block" type="submit">Ingresar</button>
+
+                                </form>
+                                <hr>
+
+                                <div class="text-center">
+                                    <button routerLink="/inicio" class="btn-success btn btn-block">Inicio</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
